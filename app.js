@@ -7,6 +7,7 @@ import dotenv from 'dotenv';
 
 // routes
 import indexRouter from './routes/index.js';
+import seederRouter from './routes/seeders.js';
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ app.use(cookieParser());
 app.set('view engine', 'pug')
 
 app.use('/', indexRouter);
+app.use('/seeders', seederRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

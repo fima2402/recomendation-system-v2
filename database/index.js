@@ -1043,6 +1043,60 @@ function seeders() {
             "priority_1": "address-30",
             "priority_2": ["address-32", "address-39", "address-10"]
         }
+    ],
+    "zonation": [
+        {
+            "name": 'A',
+            "address": [
+                'address-7',
+                'address-16',
+                'address-35',
+                'address-1'
+            ]
+        },
+        {
+            "name": 'B',
+            "address": [
+                'address-12',
+                'address-19',
+                'address-23',
+                'address-21',
+                'address-4',
+                'address-34',
+                'address-38',
+            ]
+        },
+        {
+            "name": 'C',
+            "address": [
+                'address-20',
+                'address-33',
+                'address-39',
+                'address-10',
+                'address-29',
+                'address-24',
+                'address-25',
+                'address-27',
+                'address-8',
+                'address-28',
+            ]
+        },
+        {
+            "name": 'D',
+            "address": [
+                'address-17',
+                'address-13',
+                'address-5',
+                'address-40',
+                'address-37',
+                'address-6',
+                'address-26',
+                'address-14',
+                'address-3',
+                'address-9',
+                'address-11',
+            ]
+        },
     ]
     }
 }
