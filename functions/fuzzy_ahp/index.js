@@ -94,11 +94,18 @@ function fuzzyAHP() {
     const ci = calculateCI(deltaMax, f.matrix.length);
 
     // cr
-    const cr = ci / 0.58;
+    const cr = Number((ci / 0.58).toFixed(2));
 
     return {
         status: cr < 0.1,
-        value: cr,
+        value: {
+            'cr': cr, 
+            'w' : {
+                'akreditasi': weight[0],
+                'fasilitas': weight[1],
+                'jarak': weight[2],
+            }
+        },
         msg: `Karena (${cr}<0.1), maka tingkat konsistensi matriks kriteria dapat diterima.`,
     }
 }
