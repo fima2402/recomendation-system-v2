@@ -85,17 +85,37 @@ router.post('/zonation', async(req, res) => {
     try {        
         const db = getFirestore();
         for (const value of dataSeeders.zonation) {
-            await setDoc(doc(db, "zonation", value.zonation_id), {
-                school_id: value.school_id,
-                address_id: value.address_id,
-                priority: value.priority
+            await setDoc(doc(db, "zonation", value.id), {
+                name: value.name,
+                address: value.address,
             })
 
-            console.log(`data ${value.zonation_id} berhasil ditambahkan!`)
+            console.log(`data ${value.id} berhasil ditambahkan!`)
         }
 
         res.status(200).send({
             message: 'seeders zonation succsess!'
+        });
+    }catch(error) {
+        console.error('Error seeding data:', error);
+        res.status(500).send('Error seeding data');
+    }
+})
+
+router.post('/sub-address', async(req, res) => {
+    try {        
+        const db = getFirestore();
+        for (const value of dataSeeders.sub_address) {
+            await setDoc(doc(db, "sub-address", value.id), {
+                id: value.id,
+                name: value.name,
+            })
+
+            console.log(`data ${value.id} berhasil ditambahkan!`)
+        }
+
+        res.status(200).send({
+            message: 'seeders sub-address succsess!'
         });
     }catch(error) {
         console.error('Error seeding data:', error);
