@@ -8,6 +8,26 @@ function ahp() {
     }
 }
 
+function fuzzyComparisonMatrix() {
+  return {
+    kriteria: ["akreditasi", "fasilitas", "jarak"],
+    matrix: [
+      [ [1, 1, 1], [2, 3, 4], [4, 5, 6] ],
+      [ [1/4, 1/3, 1/2], [1, 1, 1], [2, 3, 4] ],
+      [ [1/6, 1/5, 1/4], [1/4, 1/3, 1/2], [1, 1, 1] ]
+    ]}
+};
+
+function scalaSaatyMatrix() {
+  const matrix = [
+    [1,   3,   5],
+    [1/3, 1,   3],
+    [1/5, 1/3, 1]
+  ];
+
+  return matrix
+};
+
 function school() {
     return {
         "school": [
@@ -2853,6 +2873,8 @@ function seeders() {
 
 export {
     ahp,
+    fuzzyComparisonMatrix,
+    scalaSaatyMatrix,
     school,
     seeders
 }
