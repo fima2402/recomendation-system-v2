@@ -63,7 +63,7 @@ router.post('/distance', async(req, res) => {
                 school_id: value.school_id,
                 priority_1: {
                     address_id: value.priority_1,
-                    value: 3
+                    value: 1
                 },
                 priority_2: {
                     address_id: value.priority_2,
@@ -71,7 +71,7 @@ router.post('/distance', async(req, res) => {
                 },
                 priority_3: {
                     address_id: value.priority_3,
-                    value: 1
+                    value: 3
                 }
             })
 
