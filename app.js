@@ -10,6 +10,7 @@ import indexRouter from './routes/index.js';
 import seederRouter from './routes/seeders.js';
 import recomendationRouter from './routes/recomendation_system.js';
 import address from './routes/address.js'
+import sub_address from './routes/sub_address.js'
 
 dotenv.config();
 
@@ -27,6 +28,7 @@ app.use('/', indexRouter);
 app.use('/seeders', seederRouter);
 app.use('/recomendation_system', recomendationRouter);
 app.use('/address', address);
+app.use('/sub_address', sub_address);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

@@ -11,7 +11,6 @@ const schema = [
       .notEmpty().withMessage("sub_address is required!")
 ]
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
   const f = fuzzyAHP();
   res.send({fuzzyAHP: f});
