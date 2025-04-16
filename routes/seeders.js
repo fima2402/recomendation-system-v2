@@ -13,9 +13,10 @@ router.post('/schools', async(req, res) => {
             await setDoc(doc(db, "schools", value.school_id), {
                 id: value.school_id,
                 name: value.name,
-                type: value.type,
-                accreditation: value.akreditasi,
+                accreditation: value.akreditas,
                 facility: value.fasilitas,
+                type: value.type,
+                category: value.category,
                 link_profile: value.link_profile,
             })
 
@@ -57,7 +58,8 @@ router.post('/distance', async(req, res) => {
     try {        
         const db = getFirestore();
         for (const value of dataSeeders.distance) {
-            await setDoc(doc(db, "distance", value.distance_id), {
+            await setDoc(doc(db, "distance", value.id), {
+                id: value.id,
                 school_id: value.school_id,
                 priority_1: {
                     address_id: value.priority_1,
@@ -66,10 +68,14 @@ router.post('/distance', async(req, res) => {
                 priority_2: {
                     address_id: value.priority_2,
                     value: 2
+                },
+                priority_3: {
+                    address_id: value.priority_3,
+                    value: 1
                 }
             })
 
-            console.log(`data ${value.distance_id} berhasil ditambahkan!`)
+            console.log(`data ${value.id} berhasil ditambahkan!`)
         }
 
         res.status(200).send({
@@ -86,6 +92,7 @@ router.post('/zonation', async(req, res) => {
         const db = getFirestore();
         for (const value of dataSeeders.zonation) {
             await setDoc(doc(db, "zonation", value.id), {
+                id: value.id,
                 name: value.name,
                 address: value.address,
             })
@@ -108,6 +115,7 @@ router.post('/sub-address', async(req, res) => {
         for (const value of dataSeeders.sub_address) {
             await setDoc(doc(db, "sub-address", value.id), {
                 id: value.id,
+                address_id: value.address_id,
                 name: value.name,
             })
 

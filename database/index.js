@@ -430,21 +430,12 @@ function seeders() {
         },
         {
             "school_id": "school-42",
-            "name": "",
-            "akreditas": "",
-            "fasilitas": "",
-            "type": "",
-            "category": "",
-            "link_profile": ""
-        },
-        {
-            "school_id": "SMK AL - MUTTAQIEN\"",
-            "name": "A",
-            "akreditas": "kurang",
-            "fasilitas": "smk",
-            "type": "swasta",
-            "category": "https://dapo.dikdasmen.go.id/sekolah/5BE949CB54B8D779A26B",
-            "link_profile": ""
+            "name": "SMK AL - MUTTAQIEN",
+            "akreditas": "A",
+            "fasilitas": "kurang",
+            "type": "smk",
+            "category": "swasta",
+            "link_profile": "https://dapo.dikdasmen.go.id/sekolah/5BE949CB54B8D779A26B"
         },
         {
             "school_id": "school-43",
@@ -457,147 +448,75 @@ function seeders() {
         },
         {
             "school_id": "school-44",
-            "name": "",
-            "akreditas": "",
-            "fasilitas": "",
-            "type": "",
-            "category": "",
-            "link_profile": ""
-        },
-        {
-            "school_id": "SMA LOGOS\"",
-            "name": "A",
-            "akreditas": "kurang",
-            "fasilitas": "sma",
-            "type": "swasta",
-            "category": "https://dapo.dikdasmen.go.id/sekolah/96AB0514D352AF941905",
-            "link_profile": ""
+            "name": "SMA LOGOS",
+            "akreditas": "A",
+            "fasilitas": "kurang",
+            "type": "sma",
+            "category": "swasta",
+            "link_profile": "https://dapo.dikdasmen.go.id/sekolah/96AB0514D352AF941905"
         },
         {
             "school_id": "school-45",
-            "name": "",
-            "akreditas": "",
-            "fasilitas": "",
-            "type": "",
-            "category": "",
-            "link_profile": ""
-        },
-        {
-            "school_id": "SMK AL BASYARIAH\"",
-            "name": "A",
-            "akreditas": "memadai",
-            "fasilitas": "smk",
-            "type": "swasta",
-            "category": "https://dapo.dikdasmen.go.id/sekolah/70709714F4D677FF43DB",
-            "link_profile": ""
+            "name": "SMK AL BASYARIAH",
+            "akreditas": "A",
+            "fasilitas": "memadai",
+            "type": "smk",
+            "category": "swasta",
+            "link_profile": "https://dapo.dikdasmen.go.id/sekolah/70709714F4D677FF43DB"
         },
         {
             "school_id": "school-46",
-            "name": "",
-            "akreditas": "",
-            "fasilitas": "",
-            "type": "",
-            "category": "",
-            "link_profile": ""
-        },
-        {
-            "school_id": "SMK WIRABUANA 1\"",
-            "name": "A",
-            "akreditas": "memadai",
-            "fasilitas": "smk",
-            "type": "swasta",
-            "category": "https://dapo.dikdasmen.go.id/sekolah/81AA5CC9ABBFD2616A39",
-            "link_profile": ""
+            "name": "SMK WIRABUANA 1",
+            "akreditas": "A",
+            "fasilitas": "memadai",
+            "type": "smk",
+            "category": "swasta",
+            "link_profile": "https://dapo.dikdasmen.go.id/sekolah/81AA5CC9ABBFD2616A39"
         },
         {
             "school_id": "school-47",
-            "name": "",
-            "akreditas": "",
-            "fasilitas": "",
-            "type": "",
-            "category": "",
-            "link_profile": ""
-        },
-        {
-            "school_id": "SMK WIRABUANA 2\"",
-            "name": "A",
-            "akreditas": "memadai",
-            "fasilitas": "smk",
-            "type": "swasta",
-            "category": "https://dapo.dikdasmen.go.id/sekolah/ABAC888BE5CD31C281C5",
-            "link_profile": ""
+            "name": "SMK WIRABUANA 2",
+            "akreditas": "A",
+            "fasilitas": "memadai",
+            "type": "smk",
+            "category": "swasta",
+            "link_profile": "https://dapo.dikdasmen.go.id/sekolah/ABAC888BE5CD31C281C5"
         },
         {
             "school_id": "school-48",
-            "name": "",
-            "akreditas": "",
-            "fasilitas": "",
-            "type": "",
-            "category": "",
-            "link_profile": ""
-        },
-        {
-            "school_id": "SMK PARIWISATA CITAYAM\"",
-            "name": "A",
-            "akreditas": "memadai",
-            "fasilitas": "smk",
-            "type": "swasta",
-            "category": "https://dapo.dikdasmen.go.id/sekolah/51E1AA43D26F1CA32D0A",
-            "link_profile": ""
+            "name": "SMK PARIWISATA CITAYAM",
+            "akreditas": "A",
+            "fasilitas": "memadai",
+            "type": "smk",
+            "category": "swasta",
+            "link_profile": "https://dapo.dikdasmen.go.id/sekolah/51E1AA43D26F1CA32D0A"
         },
         {
             "school_id": "school-49",
-            "name": "",
-            "akreditas": "",
-            "fasilitas": "",
-            "type": "",
-            "category": "",
-            "link_profile": ""
-        },
-        {
-            "school_id": "SMK MANDIRI\"",
-            "name": "A",
-            "akreditas": "kurang",
-            "fasilitas": "smk",
-            "type": "swasta",
-            "category": "https://dapo.dikdasmen.go.id/sekolah/ECBDBF575D8DEBCC93AC",
-            "link_profile": ""
+            "name": "SMK MANDIRI",
+            "akreditas": "A",
+            "fasilitas": "kurang",
+            "type": "smk",
+            "category": "swasta",
+            "link_profile": "https://dapo.dikdasmen.go.id/sekolah/ECBDBF575D8DEBCC93AC"
         },
         {
             "school_id": "school-50",
-            "name": "",
-            "akreditas": "",
-            "fasilitas": "",
-            "type": "",
-            "category": "",
-            "link_profile": ""
-        },
-        {
-            "school_id": "SMK MEDIA TEKNOLOGI\"",
-            "name": "A",
-            "akreditas": "kurang",
-            "fasilitas": "smk",
-            "type": "swasta",
-            "category": "https://dapo.dikdasmen.go.id/sekolah/5CD5B62E37B993C0AAD2",
-            "link_profile": ""
+            "name": "SMK MEDIA TEKNOLOGI",
+            "akreditas": "A",
+            "fasilitas": "kurang",
+            "type": "smk",
+            "category": "swasta",
+            "link_profile": "https://dapo.dikdasmen.go.id/sekolah/5CD5B62E37B993C0AAD2"
         },
         {
             "school_id": "school-51",
-            "name": "",
-            "akreditas": "",
-            "fasilitas": "",
-            "type": "",
-            "category": "",
-            "link_profile": ""
-        },
-        {
-            "school_id": "SMK KESEHATAN LOGOS\"",
-            "name": "A",
-            "akreditas": "memadai",
-            "fasilitas": "smk",
-            "type": "swasta",
-            "category": "https://dapo.dikdasmen.go.id/sekolah/5BC34EBD6EC0F354BA5D",
-            "link_profile": ""
+            "name": "SMK KESEHATAN LOGOS",
+            "akreditas": "A",
+            "fasilitas": "memadai",
+            "type": "smk",
+            "category": "swasta",
+            "link_profile": "https://dapo.dikdasmen.go.id/sekolah/5BC34EBD6EC0F354BA5D"
         },
         {
             "school_id": "school-52",
@@ -610,21 +529,12 @@ function seeders() {
         },
         {
             "school_id": "school-53",
-            "name": "",
-            "akreditas": "",
-            "fasilitas": "",
-            "type": "",
-            "category": "",
-            "link_profile": ""
-        },
-        {
-            "school_id": "SMK FARMAKO MEDIKA PLUS\"",
-            "name": "A",
-            "akreditas": "memadai",
-            "fasilitas": "smk",
-            "type": "swasta",
-            "category": "https://dapo.dikdasmen.go.id/sekolah/2BE1B7B430DD5DA3210F",
-            "link_profile": ""
+            "name": "SMK FARMAKO MEDIKA PLUS",
+            "akreditas": "A",
+            "fasilitas": "memadai",
+            "type": "smk",
+            "category": "swasta",
+            "link_profile": "https://dapo.dikdasmen.go.id/sekolah/2BE1B7B430DD5DA3210F"
         },
         {
             "school_id": "school-54",
@@ -682,39 +592,21 @@ function seeders() {
         },
         {
             "school_id": "school-60",
-            "name": "",
-            "akreditas": "",
-            "fasilitas": "",
-            "type": "",
-            "category": "",
-            "link_profile": ""
-        },
-        {
-            "school_id": "SMK TI Bazma\"",
-            "name": "A",
-            "akreditas": "kurang",
-            "fasilitas": "smk",
-            "type": "swasta",
-            "category": "https://dapo.dikdasmen.go.id/sekolah/A29037D2780334B811F7",
-            "link_profile": ""
+            "name": "SMK TI Bazma",
+            "akreditas": "A",
+            "fasilitas": "kurang",
+            "type": "smk",
+            "category": "swasta",
+            "link_profile": "https://dapo.dikdasmen.go.id/sekolah/A29037D2780334B811F7"
         },
         {
             "school_id": "school-61",
-            "name": "",
-            "akreditas": "",
-            "fasilitas": "",
-            "type": "",
-            "category": "",
-            "link_profile": ""
-        },
-        {
-            "school_id": "SMKS GEO INFORMATIKA\"",
-            "name": "A",
-            "akreditas": "kurang",
-            "fasilitas": "smk",
-            "type": "swasta",
-            "category": "https://dapo.dikdasmen.go.id/sekolah/BFA631AE2B5AF218511E",
-            "link_profile": ""
+            "name": "SMKS GEO INFORMATIKA",
+            "akreditas": "A",
+            "fasilitas": "kurang",
+            "type": "smk",
+            "category": "swasta",
+            "link_profile": "https://dapo.dikdasmen.go.id/sekolah/BFA631AE2B5AF218511E"
         },
         {
             "school_id": "school-62",
@@ -885,276 +777,276 @@ function seeders() {
       }
     ],
     "sub_address": [
-      {
-          "id": "sub-address-1",
-          "address-id": "address-1",
-          "name": "Babakan Madang"
-      },
-      {
-          "id": "sub-address-2",
-          "address-id": "address-2",
-          "name": "Cimanggis"
-      },
-      {
-          "id": "sub-address-3",
-          "address-id": "address-3",
-          "name": "Cimande Hilir"
-      },
-      {
-          "id": "sub-address-4",
-          "address-id": "address-4",
-          "name": "Cariu"
-      },
-      {
-          "id": "sub-address-5",
-          "address-id": "address-4",
-          "name": "Babakan Raden"
-      },
-      {
-          "id": "sub-address-6",
-          "address-id": "address-5",
-          "name": "Cibadak"
-      },
-      {
-          "id": "sub-address-7",
-          "address-id": "address-6",
-          "name": "Banjar Waru"
-      },
-      {
-          "id": "sub-address-8",
-          "address-id": "address-7",
-          "name": "Ciriung"
-      },
-      {
-          "id": "sub-address-9",
-          "address-id": "address-7",
-          "name": "Karadenan"
-      },
-      {
-          "id": "sub-address-10",
-          "address-id": "address-7",
-          "name": "Nanggewer"
-      },
-      {
-          "id": "sub-address-11",
-          "address-id": "address-7",
-          "name": "Cibinong"
-      },
-      {
-          "id": "sub-address-12",
-          "address-id": "address-8",
-          "name": "Cibatok 1"
-      },
-      {
-          "id": "sub-address-13",
-          "address-id": "address-9",
-          "name": "Wates Jaya"
-      },
-      {
-          "id": "sub-address-14",
-          "address-id": "address-10",
-          "name": "Cigudeg"
-      },
-      {
-          "id": "sub-address-15",
-          "address-id": "address-11",
-          "name": "Cijeruk"
-      },
-      {
-          "id": "sub-address-16",
-          "address-id": "address-12",
-          "name": "Cileungsi"
-      },
-      {
-          "id": "sub-address-17",
-          "address-id": "address-12",
-          "name": "Cipenjo"
-      },
-      {
-          "id": "sub-address-18",
-          "address-id": "address-12",
-          "name": "Limus Nunggal"
-      },
-      {
-          "id": "sub-address-19",
-          "address-id": "address-13",
-          "name": "Sukaharja"
-      },
-      {
-          "id": "sub-address-20",
-          "address-id": "address-13",
-          "name": "Laladon"
-      },
-      {
-          "id": "sub-address-21",
-          "address-id": "address-14",
-          "name": "Leuwimalang"
-      },
-      {
-          "id": "sub-address-22",
-          "address-id": "address-14",
-          "name": "Tugu Selatan"
-      },
-      {
-          "id": "sub-address-23",
-          "address-id": "address-15",
-          "name": "Putat Nutug"
-      },
-      {
-          "id": "sub-address-24",
-          "address-id": "address-16",
-          "name": "Tarikolot"
-      },
-      {
-          "id": "sub-address-25",
-          "address-id": "address-17",
-          "name": "Dramaga"
-      },
-      {
-          "id": "sub-address-26",
-          "address-id": "address-18",
-          "name": "Gunung Sindur"
-      },
-      {
-          "id": "sub-address-27",
-          "address-id": "address-18",
-          "name": "Rawakalong"
-      },
-      {
-          "id": "sub-address-28",
-          "address-id": "address-19",
-          "name": "Bojong Nangka"
-      },
-      {
-          "id": "sub-address-29",
-          "address-id": "address-19",
-          "name": "Ciangsana"
-      },
-      {
-          "id": "sub-address-30",
-          "address-id": "address-19",
-          "name": "Wanaherang"
-      },
-      {
-          "id": "sub-address-31",
-          "address-id": "address-20",
-          "name": "Setu"
-      },
-      {
-          "id": "sub-address-32",
-          "address-id": "address-21",
-          "name": "Sukasirna"
-      },
-      {
-          "id": "sub-address-33",
-          "address-id": "address-1",
-          "name": "Sentul"
-      },
-      {
-          "id": "sub-address-34",
-          "address-id": "address-1",
-          "name": "Citaringgul"
-      },
-      {
-          "id": "sub-address-35",
-          "address-id": "address-1",
-          "name": "Cijayanti"
-      },
-      {
-          "id": "sub-address-36",
-          "address-id": "address-1",
-          "name": "Kadumangu"
-      },
-      {
-          "id": "sub-address-37",
-          "address-id": "address-2",
-          "name": "Pabuaran"
-      },
-      {
-          "id": "sub-address-38",
-          "address-id": "address-2",
-          "name": "Rawa Panjang"
-      },
-      {
-          "id": "sub-address-39",
-          "address-id": "address-2",
-          "name": "Bojong Gede"
-      },
-      {
-          "id": "sub-address-40",
-          "address-id": "address-2",
-          "name": "Pabuaran"
-      },
-      {
-          "id": "sub-address-41",
-          "address-id": "address-3",
-          "name": "Caringin"
-      },
-      {
-          "id": "sub-address-42",
-          "address-id": "address-3",
-          "name": "Lemah Duhur"
-      },
-      {
-          "id": "sub-address-43",
-          "address-id": "address-3",
-          "name": "Tangkil"
-      },
-      {
-          "id": "sub-address-44",
-          "address-id": "address-3",
-          "name": "Pancawati"
-      },
-      {
-          "id": "sub-address-45",
-          "address-id": "address-4",
-          "name": "Tegal Panjang"
-      },
-      {
-          "id": "sub-address-46",
-          "address-id": "address-5",
-          "name": "Cibanteng"
-      },
-      {
-          "id": "sub-address-47",
-          "address-id": "address-5",
-          "name": "Cicadas"
-      },
-      {
-          "id": "sub-address-48",
-          "address-id": "address-5",
-          "name": "Cihideung Ilir"
-      },
-      {
-          "id": "sub-address-49",
-          "address-id": "address-5",
-          "name": "Benteng"
-      },
-      {
-          "id": "sub-address-50",
-          "address-id": "address-5",
-          "name": "Ciempa"
-      },
-      {
-          "id": "sub-address-51",
-          "address-id": "address-5",
-          "name": "Cibenteng"
-      },
-      {
-          "id": "sub-address-52",
-          "address-id": "address-6",
-          "name": "Ciawi"
-      },
-      {
-          "id": "sub-address-53",
-          "address-id": "address-6",
-          "name": "Banjar Sari"
-      },
-      {
-          "id": "sub-address-54",
-          "address-id": "address-6",
-          "name": "Banjar Wangi"
-      }
+        {
+            "id": "sub-address-1",
+            "address_id": "address-1",
+            "name": "Babakan Madang"
+        },
+        {
+            "id": "sub-address-2",
+            "address_id": "address-2",
+            "name": "Cimanggis"
+        },
+        {
+            "id": "sub-address-3",
+            "address_id": "address-3",
+            "name": "Cimande Hilir"
+        },
+        {
+            "id": "sub-address-4",
+            "address_id": "address-4",
+            "name": "Cariu"
+        },
+        {
+            "id": "sub-address-5",
+            "address_id": "address-4",
+            "name": "Babakan Raden"
+        },
+        {
+            "id": "sub-address-6",
+            "address_id": "address-5",
+            "name": "Cibadak"
+        },
+        {
+            "id": "sub-address-7",
+            "address_id": "address-6",
+            "name": "Banjar Waru"
+        },
+        {
+            "id": "sub-address-8",
+            "address_id": "address-7",
+            "name": "Ciriung"
+        },
+        {
+            "id": "sub-address-9",
+            "address_id": "address-7",
+            "name": "Karadenan"
+        },
+        {
+            "id": "sub-address-10",
+            "address_id": "address-7",
+            "name": "Nanggewer"
+        },
+        {
+            "id": "sub-address-11",
+            "address_id": "address-7",
+            "name": "Cibinong"
+        },
+        {
+            "id": "sub-address-12",
+            "address_id": "address-8",
+            "name": "Cibatok 1"
+        },
+        {
+            "id": "sub-address-13",
+            "address_id": "address-9",
+            "name": "Wates Jaya"
+        },
+        {
+            "id": "sub-address-14",
+            "address_id": "address-10",
+            "name": "Cigudeg"
+        },
+        {
+            "id": "sub-address-15",
+            "address_id": "address-11",
+            "name": "Cijeruk"
+        },
+        {
+            "id": "sub-address-16",
+            "address_id": "address-12",
+            "name": "Cileungsi"
+        },
+        {
+            "id": "sub-address-17",
+            "address_id": "address-12",
+            "name": "Cipenjo"
+        },
+        {
+            "id": "sub-address-18",
+            "address_id": "address-12",
+            "name": "Limus Nunggal"
+        },
+        {
+            "id": "sub-address-19",
+            "address_id": "address-13",
+            "name": "Sukaharja"
+        },
+        {
+            "id": "sub-address-20",
+            "address_id": "address-13",
+            "name": "Laladon"
+        },
+        {
+            "id": "sub-address-21",
+            "address_id": "address-14",
+            "name": "Leuwimalang"
+        },
+        {
+            "id": "sub-address-22",
+            "address_id": "address-14",
+            "name": "Tugu Selatan"
+        },
+        {
+            "id": "sub-address-23",
+            "address_id": "address-15",
+            "name": "Putat Nutug"
+        },
+        {
+            "id": "sub-address-24",
+            "address_id": "address-16",
+            "name": "Tarikolot"
+        },
+        {
+            "id": "sub-address-25",
+            "address_id": "address-17",
+            "name": "Dramaga"
+        },
+        {
+            "id": "sub-address-26",
+            "address_id": "address-18",
+            "name": "Gunung Sindur"
+        },
+        {
+            "id": "sub-address-27",
+            "address_id": "address-18",
+            "name": "Rawakalong"
+        },
+        {
+            "id": "sub-address-28",
+            "address_id": "address-19",
+            "name": "Bojong Nangka"
+        },
+        {
+            "id": "sub-address-29",
+            "address_id": "address-19",
+            "name": "Ciangsana"
+        },
+        {
+            "id": "sub-address-30",
+            "address_id": "address-19",
+            "name": "Wanaherang"
+        },
+        {
+            "id": "sub-address-31",
+            "address_id": "address-20",
+            "name": "Setu"
+        },
+        {
+            "id": "sub-address-32",
+            "address_id": "address-21",
+            "name": "Sukasirna"
+        },
+        {
+            "id": "sub-address-33",
+            "address_id": "address-1",
+            "name": "Sentul"
+        },
+        {
+            "id": "sub-address-34",
+            "address_id": "address-1",
+            "name": "Citaringgul"
+        },
+        {
+            "id": "sub-address-35",
+            "address_id": "address-1",
+            "name": "Cijayanti"
+        },
+        {
+            "id": "sub-address-36",
+            "address_id": "address-1",
+            "name": "Kadumangu"
+        },
+        {
+            "id": "sub-address-37",
+            "address_id": "address-2",
+            "name": "Pabuaran"
+        },
+        {
+            "id": "sub-address-38",
+            "address_id": "address-2",
+            "name": "Rawa Panjang"
+        },
+        {
+            "id": "sub-address-39",
+            "address_id": "address-2",
+            "name": "Bojong Gede"
+        },
+        {
+            "id": "sub-address-40",
+            "address_id": "address-2",
+            "name": "Pabuaran"
+        },
+        {
+            "id": "sub-address-41",
+            "address_id": "address-3",
+            "name": "Caringin"
+        },
+        {
+            "id": "sub-address-42",
+            "address_id": "address-3",
+            "name": "Lemah Duhur"
+        },
+        {
+            "id": "sub-address-43",
+            "address_id": "address-3",
+            "name": "Tangkil"
+        },
+        {
+            "id": "sub-address-44",
+            "address_id": "address-3",
+            "name": "Pancawati"
+        },
+        {
+            "id": "sub-address-45",
+            "address_id": "address-4",
+            "name": "Tegal Panjang"
+        },
+        {
+            "id": "sub-address-46",
+            "address_id": "address-5",
+            "name": "Cibanteng"
+        },
+        {
+            "id": "sub-address-47",
+            "address_id": "address-5",
+            "name": "Cicadas"
+        },
+        {
+            "id": "sub-address-48",
+            "address_id": "address-5",
+            "name": "Cihideung Ilir"
+        },
+        {
+            "id": "sub-address-49",
+            "address_id": "address-5",
+            "name": "Benteng"
+        },
+        {
+            "id": "sub-address-50",
+            "address_id": "address-5",
+            "name": "Ciempa"
+        },
+        {
+            "id": "sub-address-51",
+            "address_id": "address-5",
+            "name": "Cibenteng"
+        },
+        {
+            "id": "sub-address-52",
+            "address_id": "address-6",
+            "name": "Ciawi"
+        },
+        {
+            "id": "sub-address-53",
+            "address_id": "address-6",
+            "name": "Banjar Sari"
+        },
+        {
+            "id": "sub-address-54",
+            "address_id": "address-6",
+            "name": "Banjar Wangi"
+        }
     ],
     "distance": [
       {
