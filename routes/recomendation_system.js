@@ -172,12 +172,21 @@ router.post('/', schema, async function(req, res, next) {
     final_value: m.find((v) => v.id === school.id)?.value ?? null
   }))
 
+  const negeri = sortDataByFinalValue(final_result.filter((v) => v.category === 'negeri'), false)
+  const swasta = sortDataByFinalValue(final_result.filter((v) => v.category === 'swasta'), false)
+
   final_result = {
-    "negeri" : sortDataByFinalValue(final_result.filter((v) => v.category === 'negeri'), false),
-    "swasta" : sortDataByFinalValue(final_result.filter((v) => v.category === 'swasta'), false)
+    "negeri" : {
+      "data": negeri.slice(0, 5),
+      "total": negeri.length
+    },
+    "swasta" : {
+      "data": swasta.slice(0, 5),
+      "total": swasta.length
+    },
   }
 
-  res.send({final_result, fuzzyAhp: f});
+  res.send({fuzzyAhp: f, result: final_result});
 })
 
 export default router;
