@@ -5,6 +5,16 @@ import { getFirestore, collection, getDocs, query, where, doc } from 'firebase/f
 import { body, validationResult } from 'express-validator';
 var router = Router();
 
+function sortDataByFinalValue(data, ascending = true) {
+  return data.sort((a, b) => {
+    if (ascending) {
+      return a.final_value - b.final_value; // Urutkan dari kecil ke besar
+    } else {
+      return b.final_value - a.final_value; // Urutkan dari besar ke kecil
+    }
+  });
+}
+
 const schema = [
   body('address')
       .notEmpty().withMessage("address is required!"),
@@ -134,6 +144,7 @@ router.post('/', schema, async function(req, res, next) {
       id: school.id,
       name: school.name,
       type: school.type,
+      category: school.category,
       address: list_address.find(v => v.id === distance_user.address) ?? '',
       sub_address: list_subaddress.find(v => v.id === distance_user.sub_address)?.name ?? '',
       link_profile: school.link_profile,
@@ -156,7 +167,17 @@ router.post('/', schema, async function(req, res, next) {
   // Mabac
   const m = mabac(w, result);
 
-  res.send(m);
+  let final_result = result.map((school) => ({
+    ...school,
+    final_value: m.find((v) => v.id === school.id)?.value ?? null
+  }))
+
+  final_result = {
+    "negeri" : sortDataByFinalValue(final_result.filter((v) => v.category === 'negeri'), false),
+    "swasta" : sortDataByFinalValue(final_result.filter((v) => v.category === 'swasta'), false)
+  }
+
+  res.send({final_result, fuzzyAhp: f});
 })
 
 export default router;
