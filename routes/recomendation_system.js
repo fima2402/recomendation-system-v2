@@ -64,7 +64,12 @@ router.post('/', schema, async function(req, res, next) {
   })
 
   // school
-  docs = await getDocs(collection(db, "schools"))
+  docs = await getDocs(
+                      query(
+                        collection(db, "schools"), 
+                        type ? where('type', '==', type) : '',
+                      )
+                    )
   docs.forEach((doc) => {
     list_school.push(doc.data())
   })
