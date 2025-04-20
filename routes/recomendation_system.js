@@ -98,7 +98,6 @@ router.post('/', schema, async function(req, res, next) {
         }
       }
   
-      let result = ''
       const detail = {
         'zonation': list_zonation.find(v => v.id === distance_user.zonation)?.name ?? '',
         'address': list_address.find(v => v.id === distance_user.address)?.name ?? '',
@@ -168,6 +167,8 @@ router.post('/', schema, async function(req, res, next) {
       }
     }
   })
+
+  result = result.filter((v) => v.zonation === v.distance.zonation)
 
   // fuzzy ahp
   const f = fuzzyAHP();
