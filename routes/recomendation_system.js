@@ -92,7 +92,7 @@ router.post('/', schema, async function(req, res, next) {
   docs.forEach((doc) => {
       const filter = {
         "priority" : {
-          'priority_1' : doc.data().priority_1.address_id === distance_user.zonation,
+          'priority_1' : doc.data().priority_1.address_id === distance_user.zonation || doc.data().priority_1.address_id === 'zonation-all',
           'priority_2' : doc.data().priority_2.address_id === distance_user.address,
           'priority_3' : doc.data().priority_3.address_id === distance_user.sub_address,
         }
@@ -131,6 +131,7 @@ router.post('/', schema, async function(req, res, next) {
       list_distance.push({
         id: doc_distance.id,
         school_id: doc_distance.school_id,
+        name: doc_distance,
         result: Object.assign(result, detail),
       })
   })
@@ -144,14 +145,17 @@ router.post('/', schema, async function(req, res, next) {
     distance_value = list_distance.find((v) => v.school_id === school.id)?.result ?? ''
     school.accreditation === 'A' ? accreditation_value = 3 : school.accreditation === 'B' ? accreditation_value = 2 : accreditation_value = 1
     school.facility === 'memadai' ? facility_value = 3 : school.facility === 'setara' ? facility_value = 2 : facility_value = 1
+    
+    const zonation = list_zonation.find(v => v.id === list_distance.find(v => v.school_id === school.id).name.priority_1.address_id)?.name ?? 'A, B, C, D, E'
 
     return {
       id: school.id,
       name: school.name,
       type: school.type,
       category: school.category,
-      address: list_address.find(v => v.id === distance_user.address) ?? '',
+      address: list_address.find(v => v.id === distance_user.address).name ?? '',
       sub_address: list_subaddress.find(v => v.id === distance_user.sub_address)?.name ?? '',
+      zonation: zonation,
       link_profile: school.link_profile,
       distance: distance_value,
       facility: {
@@ -182,11 +186,13 @@ router.post('/', schema, async function(req, res, next) {
 
   final_result = {
     "negeri" : {
-      "data": negeri.slice(0, 5),
+      // "data": negeri.slice(0, 5),
+      "data": negeri,
       "total": negeri.length
     },
     "swasta" : {
-      "data": swasta.slice(0, 5),
+      // "data": swasta.slice(0, 5),
+      "data": swasta,
       "total": swasta.length
     },
   }
