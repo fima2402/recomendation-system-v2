@@ -186,13 +186,11 @@ router.post('/', schema, async function(req, res, next) {
 
   final_result = {
     "negeri" : {
-      // "data": negeri.slice(0, 5),
-      "data": negeri,
+      "data": negeri.slice(0, 5),
       "total": negeri.length
     },
     "swasta" : {
-      // "data": swasta.slice(0, 5),
-      "data": swasta,
+      "data": swasta.slice(0, 5),
       "total": swasta.length
     },
   }
