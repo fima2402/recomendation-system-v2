@@ -98,28 +98,27 @@ router.post('/', schema, async function(req, res, next) {
         }
       }
   
-      const detail = {
-        'zonation': list_zonation.find(v => v.id === distance_user.zonation)?.name ?? '',
-        'address': list_address.find(v => v.id === distance_user.address)?.name ?? '',
-        'sub_address': list_subaddress.find(v => v.id === distance_user.sub_address)?.name ?? ''
+      let detail = {
+        "id": 'priority_0',
+        "value": 0,
       }
   
       if(filter.priority.priority_1) {
-        result = {
+        detail = {
           "id": 'priority_1',
           "value": 1
         }
       } 
       
       if(filter.priority.priority_2) {
-        result = {
+        detail = {
           "id": 'priority_2',
           "value": 2
         }
       } 
       
       if(filter.priority.priority_3) {
-        result = {
+        detail = {
           "id": 'priority_3',
           "value": 3
         }
@@ -131,7 +130,13 @@ router.post('/', schema, async function(req, res, next) {
         id: doc_distance.id,
         school_id: doc_distance.school_id,
         name: doc_distance,
-        result: Object.assign(result, detail),
+        detail: doc_distance,
+        result: { 
+          ...detail,         
+          'zonation': list_zonation.find(v => v.id === distance_user.zonation)?.name ?? '',
+          'address': list_address.find(v => v.id === distance_user.address)?.name ?? '',
+          'sub_address': list_subaddress.find(v => v.id === distance_user.sub_address)?.name ?? '', 
+        },
       })
   })
 
@@ -141,7 +146,9 @@ router.post('/', schema, async function(req, res, next) {
     let accreditation_value = 1
     let facility_value = 1
 
-    distance_value = list_distance.find((v) => v.school_id === school.id)?.result ?? ''
+    const distance_detail = list_distance.find((v) => v.school_id === school.id)
+    
+    distance_value = distance_detail.result
     school.accreditation === 'A' ? accreditation_value = 3 : school.accreditation === 'B' ? accreditation_value = 2 : accreditation_value = 1
     school.facility === 'memadai' ? facility_value = 3 : school.facility === 'setara' ? facility_value = 2 : facility_value = 1
     
@@ -152,8 +159,8 @@ router.post('/', schema, async function(req, res, next) {
       name: school.name,
       type: school.type,
       category: school.category,
-      address: list_address.find(v => v.id === distance_user.address).name ?? '',
-      sub_address: list_subaddress.find(v => v.id === distance_user.sub_address)?.name ?? '',
+      address: list_address.find(v => v.id === distance_detail.detail.priority_2.address_id).name ?? '',
+      sub_address: list_subaddress.find(v => v.id === distance_detail.detail.priority_3.address_id)?.name ?? '',
       zonation: zonation,
       link_profile: school.link_profile,
       distance: distance_value,
@@ -168,7 +175,7 @@ router.post('/', schema, async function(req, res, next) {
     }
   })
 
-  result = result.filter((v) => v.zonation === v.distance.zonation)
+  result = result.filter((v) => v.zonation === list_zonation.find((v) => v.id === distance_user.zonation).name)
 
   // fuzzy ahp
   const f = fuzzyAHP();
@@ -182,16 +189,26 @@ router.post('/', schema, async function(req, res, next) {
     final_value: m.find((v) => v.id === school.id)?.value ?? null
   }))
 
+  const near_sub_address = final_result.filter((v) => v.distance.value === 3)
+  const far_sub_address_address = final_result.filter((v) =>  v.distance.value === 2)
+  const far_sub_address_zonation = final_result.filter((v) =>  v.distance.value === 1)
+
+  final_result = [...near_sub_address, ...far_sub_address_address, ...far_sub_address_zonation];
+  final_result = Array.from(
+    new Map(final_result.map((v) => [v.id, v])).values()
+  );
+
   const negeri = sortDataByFinalValue(final_result.filter((v) => v.category === 'negeri'), false)
   const swasta = sortDataByFinalValue(final_result.filter((v) => v.category === 'swasta'), false)
 
+
   final_result = {
     "negeri" : {
-      "data": negeri.slice(0, 5),
+      "data": negeri,
       "total": negeri.length
     },
     "swasta" : {
-      "data": swasta.slice(0, 5),
+      "data": swasta,
       "total": swasta.length
     },
   }
