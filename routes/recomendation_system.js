@@ -198,17 +198,17 @@ router.post('/', schema, async function(req, res, next) {
     new Map(final_result.map((v) => [v.id, v])).values()
   );
 
-  const negeri = sortDataByFinalValue(final_result.filter((v) => v.category === 'negeri'), false)
-  const swasta = sortDataByFinalValue(final_result.filter((v) => v.category === 'swasta'), false)
+  const negeri = final_result.filter((v) => v.category === 'negeri')
+  const swasta = final_result.filter((v) => v.category === 'swasta')
 
 
   final_result = {
     "negeri" : {
-      "data": negeri,
+      "data": negeri.slice(0,10),
       "total": negeri.length
     },
     "swasta" : {
-      "data": swasta,
+      "data": swasta.slice(0,10),
       "total": swasta.length
     },
   }
