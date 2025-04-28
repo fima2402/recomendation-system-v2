@@ -189,28 +189,44 @@ router.post('/', schema, async function(req, res, next) {
     final_value: m.find((v) => v.id === school.id)?.value ?? null
   }))
 
+  
   const near_sub_address = final_result.filter((v) => v.distance.value === 3)
   const far_sub_address_address = final_result.filter((v) =>  v.distance.value === 2)
   const far_sub_address_zonation = final_result.filter((v) =>  v.distance.value === 1)
 
-  final_result = [...near_sub_address, ...far_sub_address_address, ...far_sub_address_zonation];
-  final_result = Array.from(
-    new Map(final_result.map((v) => [v.id, v])).values()
+  let filtered = [...sortDataByFinalValue(near_sub_address, false), ...sortDataByFinalValue(far_sub_address_address,false), ...sortDataByFinalValue(far_sub_address_zonation, false)]
+  filtered = Array.from(
+    new Map(filtered.map((v) => [v.id, v])).values()
   );
 
   const negeri = final_result.filter((v) => v.category === 'negeri')
   const swasta = final_result.filter((v) => v.category === 'swasta')
+  const negeri_filtered = filtered.filter((v) => v.category === 'negeri')
+  const swasta_filtered = filtered.filter((v) => v.category === 'swasta')
 
 
   final_result = {
-    "negeri" : {
-      "data": negeri.slice(0,10),
-      "total": negeri.length
-    },
-    "swasta" : {
-      "data": swasta.slice(0,10),
-      "total": swasta.length
-    },
+    "default" : {
+      "negeri" : {
+        "data": sortDataByFinalValue(negeri, false).slice(0,10),
+        "total": negeri.length
+      },
+      "swasta" : {
+        "data": sortDataByFinalValue(swasta, false).slice(0,10),
+        "total": swasta.length
+      },            
+    }, 
+    "filtered" : {
+      "negeri" : {
+        "data": negeri_filtered.slice(0,10),
+        "total": negeri_filtered.length
+      },
+      "swasta" : {
+        "data": swasta_filtered.slice(0,10),
+        "total": swasta_filtered.length
+      },
+    }
+    
   }
 
   res.send({fuzzyAhp: f, result: final_result});
